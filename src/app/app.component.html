@@ -1,4 +1,4 @@
-<div *ngIf="!contentLoaded" class="loading">Loading</div>
+<div *ngIf="!contentLoaded || isLoading" class="loading">Loading</div>
 
 <table class="table" *ngIf="contentLoaded" style="max-width: 600px">
   <tbody>
@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-<button type="button" class="btn btn-primary" (click)="getStatistics()">Check results</button>
+<button type="button" *ngIf="contentLoaded" class="btn btn-primary" (click)="getStatistics()">Check results</button>
 
 <br/>
 <br/>
@@ -32,6 +32,6 @@
   </tr>
   </tbody>
 </table>
-<ng-template #emptyStats>No statistics found</ng-template>
+<ng-template *ngIf="contentLoaded" #emptyStats>No statistics found</ng-template>
 
 <router-outlet></router-outlet>

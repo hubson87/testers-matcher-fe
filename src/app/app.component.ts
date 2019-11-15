@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   countriesDict: DictionaryItem[];
   devicesDict: DictionaryItem[];
   contentLoaded: boolean;
+  isLoading: boolean;
   selectedCountries: string[];
   selectedDevices: string[];
   testers: Tester[];
@@ -47,11 +48,16 @@ export class AppComponent implements OnInit {
   }
 
   getStatistics() {
+    this.isLoading = true;
     this.statisticsService.getStatistics(this.selectedCountries, this.selectedDevices)
-      .then(stats => this.testers = stats)
+      .then(stats => {
+        this.testers = stats;
+        this.isLoading = false;
+      })
       .catch(error => {
         console.log('Cannot obtain statistics from server', error);
         alert('Cannot connect to the server, please check connection and try again');
+        this.isLoading = false;
       });
   }
 }
