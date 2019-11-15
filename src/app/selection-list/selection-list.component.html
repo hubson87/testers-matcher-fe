@@ -1,0 +1,21 @@
+<div *ngIf="dictionary != null" style="max-width: 250px">
+  <h2>{{ header }}</h2>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" [name]="componentId" [id]="componentId + '_allValRadio'" value="true" [checked]="allValuesChecked" (click)="setRadioValue(true)">
+    <label class="form-check-label" [for]="componentId + '_allValRadio'">
+      All {{ header }}
+    </label>
+  </div>
+
+  <div class="form-check">
+    <input class="form-check-input" type="radio" [name]="componentId" [id]="componentId + '_chkValRadio'" value="false" (click)="setRadioValue(false)">
+    <label class="form-check-label" [for]="componentId + '_chkValRadio'">
+      Select {{ header }}
+    </label>
+    <p style="font-size: 10px">(*if nothing selected, all the elements will be used)</p>
+  </div>
+  <select class="custom-select" (change)="triggerChange()" [(ngModel)]="selectedDictValues" multiple [disabled]="allValuesChecked">
+    <option *ngFor="let elem of dictionary" [ngValue]="elem.code">{{ elem.name }}</option>
+  </select>
+</div>
