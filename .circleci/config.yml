@@ -27,16 +27,16 @@ jobs:
             - node_modules
       - run:
           name: Build
-          command: ng build
+          command: npm run build
       # Lint the source code
       - run:
           name: Linting
-          command: ng lint
+          command: npm run lint
       # Test the source code
       - run:
           name: Testing
-          command: ng test --watch false
+          command: npm run test --watch false
       # End to End test
  #     - run:
  #         name: End to End Test
- #         command: ng e2e
+ #         command: npm run e2e
