@@ -1,11 +1,13 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
-import { SelectionListComponent } from './selection-list/selection-list.component';
 import {FormsModule} from '@angular/forms';
+import {SelectionListComponent} from './selection-list/selection-list.component';
+import {DictionaryService} from './service/dictionary.service';
+import {StatisticsService} from './service/statistics.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,11 @@ import {FormsModule} from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    DictionaryService,
+    StatisticsService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -26,8 +26,6 @@ export class SelectionListComponent {
     this.triggerChange();
   }
 
-
-
   triggerChange(): void {
     let elems: string[] = [];
     if (!this.allValuesChecked) {

@@ -1,4 +1,4 @@
-<div *ngIf="dictionary != null" style="max-width: 250px">
+<div id="mainDiv" *ngIf="dictionary != null" style="max-width: 250px">
   <h2>{{ header }}</h2>
 
   <div class="form-check">
@@ -9,7 +9,7 @@
   </div>
 
   <div class="form-check">
-    <input class="form-check-input" type="radio" [name]="componentId" [id]="componentId + '_chkValRadio'" value="false" (click)="setRadioValue(false)">
+    <input class="form-check-input" type="radio" [name]="componentId" [id]="componentId + '_chkValRadio'" value="false" [checked]="!allValuesChecked" (click)="setRadioValue(false)">
     <label class="form-check-label" [for]="componentId + '_chkValRadio'">
       Select {{ header }}
     </label>

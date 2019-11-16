@@ -13,7 +13,7 @@ export class DictionaryService {
     this.url = environment.apiUrl + environment.dictionariesEndpoint;
   }
 
-  getDictionaries(): Promise<Dictionaries> {
+    getDictionaries(): Promise<Dictionaries> {
     return this.httpClient.get(this.url).toPromise() as Promise<Dictionaries>;
   }
 }

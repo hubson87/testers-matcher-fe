@@ -10,7 +10,6 @@ import {Tester} from './service/model/tester';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'testers-matcher-fe';
   countriesDict: DictionaryItem[];
   devicesDict: DictionaryItem[];
   contentLoaded: boolean;
