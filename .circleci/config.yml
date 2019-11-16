@@ -37,6 +37,6 @@ jobs:
           name: Testing
           command: npm run test
       # End to End test
-      - run:
-          name: End to End Test
-          command: npm run e2e
+ #     - run:
+ #         name: End to End Test
+ #         command: npm run e2e

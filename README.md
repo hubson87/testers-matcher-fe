@@ -11,4 +11,4 @@ Production configuration hasn't been provided as production endpoints are not kn
 
 ## Running the application
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-Application will start at port `4200`
+Application will start at port `4200` (BE project url: https://github.com/hubson87/testers-matcher)
