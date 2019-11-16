@@ -8,10 +8,10 @@ import {DictionaryItem} from '../service/model/dictionary-item';
 })
 export class SelectionListComponent {
 
-  @Input('dictionary') dictionary: DictionaryItem[];
-  @Input('header') header: string;
-  @Input('id') componentId: string;
-  @Output('selectedValues') selectedValuesEmitter: EventEmitter<string[]>;
+  @Input() dictionary: DictionaryItem[];
+  @Input() header: string;
+  @Input() componentId: string;
+  @Output() selectedValuesEmitter: EventEmitter<string[]>;
   allValuesChecked: boolean;
   selectedDictValues: string[];
 

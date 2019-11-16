@@ -3,8 +3,8 @@
 <table class="table" *ngIf="contentLoaded" style="max-width: 600px">
   <tbody>
   <tr>
-    <td><app-selection-list id="countries" header="Countries" [dictionary]="countriesDict" (selectedValues)="assignCountries($event)"></app-selection-list></td>
-    <td><app-selection-list id="devices" header="Devices" [dictionary]="devicesDict" (selectedValues)="assignDevices($event)"></app-selection-list></td>
+    <td><app-selection-list componentId="countries" header="Countries" [dictionary]="countriesDict" (selectedValuesEmitter)="assignCountries($event)"></app-selection-list></td>
+    <td><app-selection-list componentId="devices" header="Devices" [dictionary]="devicesDict" (selectedValuesEmitter)="assignDevices($event)"></app-selection-list></td>
   </tr>
 </table>
 
