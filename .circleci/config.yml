@@ -35,7 +35,7 @@ jobs:
       # Test the source code
       - run:
           name: Testing
-          command: npm run test
+          command: npm run test --watch false
       # End to End test
  #     - run:
  #         name: End to End Test
