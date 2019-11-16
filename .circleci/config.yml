@@ -26,9 +26,6 @@ jobs:
           paths:
             - node_modules
       - run:
-          name: install cli
-          command: npm install -g @angular/cli@8.3.18
-      - run:
           name: Build
           command: ng build
       # Lint the source code
