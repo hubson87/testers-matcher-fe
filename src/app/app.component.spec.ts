@@ -9,7 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {Dictionaries} from './service/model/dictionaries';
 import {from} from 'rxjs';
 import {Tester} from './service/model/tester';
-import {By} from "@angular/platform-browser";
+import {By} from '@angular/platform-browser';
 
 describe('AppComponent', () => {
   let component: AppComponent;
