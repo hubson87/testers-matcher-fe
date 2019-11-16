@@ -1,7 +1,6 @@
 version: 2
 jobs:
-  # The test job
-  test:
+  build:
     working_directory: ~/testers-matcher-fe
     docker:
       - image: circleci/node:10-browsers
@@ -26,6 +25,9 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
           paths:
             - node_modules
+      - run:
+          name: Build
+          command: npm run build
       # Lint the source code
       - run:
           name: Linting
