@@ -4,9 +4,9 @@
 
 export const environment = {
   production: false,
-  apiUrl: "http://localhost:8080/",
-  dictionariesEndpoint: "dictionary/all",
-  statisticsEndpoint: "statistics"
+  apiUrl: 'http://localhost:8080/',
+  dictionariesEndpoint: 'dictionary/all',
+  statisticsEndpoint: 'statistics'
 };
 
 /*
