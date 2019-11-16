@@ -26,17 +26,20 @@ jobs:
           paths:
             - node_modules
       - run:
+          name: install cli
+          command: npm install -g @angular/cli@8.3.18
+      - run:
           name: Build
-          command: npm run build
+          command: ng build
       # Lint the source code
       - run:
           name: Linting
-          command: npm run lint
+          command: ng lint
       # Test the source code
       - run:
           name: Testing
-          command: npm run test --watch false
+          command: ng test --watch false
       # End to End test
  #     - run:
  #         name: End to End Test
- #         command: npm run e2e
+ #         command: ng e2e

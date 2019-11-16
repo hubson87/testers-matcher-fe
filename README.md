@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/hubson87/testers-matcher-fe.svg?style=svg)](https://circleci.com/gh/hubson87/testers-matcher-fe)
 ## Dependencies
 To build and run this project, user needs to have up to date `nodejs` and `AngularCLI` installed
 To run it properly user should run `testers-matcher` application first (at port 8080)
